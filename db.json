@@ -1,1 +1,355 @@
-{"financial-records":[{"id":1,"description":"Produccion semanal","amount":1850,"ownerId":1,"type":"Ingreso","date":"2026-05-01","category":"Venta de leche"},{"id":2,"description":"Compra de concentrado","amount":620,"ownerId":1,"type":"Egreso","date":"2026-05-03","category":"Alimento"},{"id":3,"description":"Medicamentos y visita","amount":280,"ownerId":1,"type":"Egreso","date":"2026-05-05","category":"Veterinaria"},{"id":4,"description":"Venta de huevos de gallina","amount":540,"ownerId":1,"type":"Ingreso","date":"2026-05-07","category":"Venta de huevos"},{"id":5,"description":"Reparacion de bebederos","amount":360,"ownerId":1,"type":"Egreso","date":"2026-05-09","category":"Mantenimiento"}],"health-events":[{"veterinarian":"Dra. Ana Lopez","id":1,"type":"Tratamiento","animalId":1,"treatment":"Aplicacion de vacuna triple bovina","description":"Vacuna triple bovina","date":"2026-05-02","prescription":"Observacion por 24 horas y mantener hidratacion","followUp":"Control rutinario en seis meses","diagnosis":"Animal sin signos de alarma durante revision preventiva","nextDueDate":"2026-11-02"},{"veterinarian":"Dr. Pedro Ramirez","id":2,"type":"Tratamiento","animalId":2,"treatment":"Antibiotico y antiinflamatorio por tres dias","description":"Tratamiento por infeccion respiratoria leve","date":"2026-05-05","prescription":"Dosis segun peso, aplicar cada 24 horas","followUp":"Revisar temperatura y apetito","diagnosis":"Infeccion respiratoria leve","nextDueDate":"2026-05-12"},{"veterinarian":"Dr. Pedro Ramirez","id":3,"type":"Diagnostico","animalId":10,"treatment":"Desparasitacion y control de peso","description":"Evaluacion por perdida de apetito","date":"2026-05-06","prescription":"Aplicar antiparasitario segun peso","followUp":"Revisar evolucion en siete dias","diagnosis":"Posible parasitosis gastrointestinal","nextDueDate":"2026-05-13"},{"veterinarian":"Dr. Pedro Ramirez","id":4,"type":"Revision","animalId":11,"treatment":"Ajuste progresivo de dieta","description":"Revision de lote porcino en observacion","date":"2026-05-08","prescription":"Mantener hidratacion y racion dividida","followUp":"Control de consumo diario","diagnosis":"Estrés por cambio de alimento","nextDueDate":"2026-05-15"},{"veterinarian":"Dra. Lucia Torres","id":5,"type":"Incidencia","animalId":15,"treatment":"Reposo y antiinflamatorio","description":"Cojera leve en ovino macho","date":"2026-05-04","prescription":"Separar del lote por tres dias","followUp":"Evaluar apoyo de extremidad","diagnosis":"Inflamacion por golpe en extremidad","nextDueDate":"2026-05-11"}],"users":[{"id":1,"password":"anitec123","veterinarianId":2,"username":"ganadero","role":"rancher","fullName":"Carlos Mendoza"},{"username":"veterinaria","role":"veterinarian","fullName":"Dra. Ana Lopez","id":2,"password":"anitec123"},{"id":3,"password":"anitec123","veterinarianId":2,"username":"maria","role":"rancher","fullName":"Maria Gonzales"},{"id":4,"password":"anitec123","veterinarianId":5,"username":"jose","role":"rancher","fullName":"Jose Quispe"},{"username":"vetpedro","role":"veterinarian","fullName":"Dr. Pedro Ramirez","id":5,"password":"anitec123"}],"herds":[{"id":1,"name":"Hato Los Alamos","owner":"Carlos Mendoza","ownerId":1,"veterinarianId":2,"mainType":"Mixto","location":"Cajamarca"},{"id":2,"name":"Granja El Molino","owner":"Carlos Mendoza","ownerId":1,"veterinarianId":2,"mainType":"Aves","location":"Cajamarca"},{"id":3,"name":"Finca Santa Rosa","owner":"Maria Gonzales","ownerId":3,"veterinarianId":2,"mainType":"Ovino y caprino","location":"Junin"},{"id":4,"name":"Establo La Esperanza","owner":"Maria Gonzales","ownerId":3,"veterinarianId":2,"mainType":"Bovino","location":"Junin"},{"id":5,"name":"Fundo Alto Verde","owner":"Jose Quispe","ownerId":4,"veterinarianId":5,"mainType":"Mixto","location":"Cusco"}],"report-metrics":[{"label":"Animales registrados","id":1,"value":"3","trend":"+12%"},{"label":"Alertas sanitarias","id":2,"value":"2","trend":"Esta semana"},{"label":"Balance mensual","id":3,"value":"S/ 950","trend":"+18%"},{"label":"Trazabilidad","id":4,"value":"100%","trend":"Completa"}],"farm-events":[{"id":1,"title":"Refuerzo de vacuna","type":"Sanitario","ownerId":1,"priority":"Alta","status":"Pendiente","date":"2026-05-12","veterinarianId":2},{"id":2,"title":"Control de peso mensual","type":"Productivo","ownerId":1,"priority":"Media","status":"Pendiente","date":"2026-05-15","veterinarianId":2},{"id":3,"title":"Revision de gastos","type":"Financiero","ownerId":1,"priority":"Baja","status":"Programado","date":"2026-05-20","veterinarianId":null},{"id":4,"title":"Visita sanitaria ovina","type":"Visita veterinaria","ownerId":3,"priority":"Alta","status":"Pendiente","date":"2026-05-13","veterinarianId":2},{"id":5,"title":"Control reproductivo bovino","type":"Reproductivo","ownerId":3,"priority":"Media","status":"Programado","date":"2026-05-18","veterinarianId":2}],"animals":[{"species":"Bovino","id":1,"weight":430,"herdId":1,"breed":"Holstein","name":"Luna","tag":"ANI-001","gender":"Hembra","status":"Saludable","birthDate":"2022-04-12"},{"species":"Bovino","id":2,"weight":520,"herdId":1,"breed":"Brown Swiss","name":"Bruno","tag":"ANI-002","gender":"Macho","status":"En tratamiento","birthDate":"2021-08-20"},{"species":"Ovino","id":3,"weight":310,"herdId":3,"breed":"Corriedale","name":"Nube","tag":"ANI-003","gender":"Hembra","status":"Observacion","birthDate":"2023-01-05"},{"species":"Caprino","id":4,"weight":58,"herdId":3,"breed":"Saanen","name":"Pecas","tag":"ANI-004","gender":"Hembra","status":"Saludable","birthDate":"2023-09-14"},{"species":"Pollo","id":5,"weight":2,"herdId":2,"breed":"Broiler","name":"Lote Pollos A","tag":"ANI-005","gender":"Mixto","status":"Saludable","birthDate":"2026-03-20"}],"authentication":{"sign-up":[],"sign-in":[]}}
+{
+  "financialRecords": {
+    "financial-records": [
+      {
+        "id": 1,
+        "description": "Produccion semanal",
+        "amount": 1850,
+        "ownerId": 1,
+        "type": "Ingreso",
+        "date": "2026-05-01",
+        "category": "Venta de leche"
+      },
+      {
+        "id": 2,
+        "description": "Compra de concentrado",
+        "amount": 620,
+        "ownerId": 1,
+        "type": "Egreso",
+        "date": "2026-05-03",
+        "category": "Alimento"
+      },
+      {
+        "id": 3,
+        "description": "Medicamentos y visita",
+        "amount": 280,
+        "ownerId": 1,
+        "type": "Egreso",
+        "date": "2026-05-05",
+        "category": "Veterinaria"
+      },
+      {
+        "id": 4,
+        "description": "Venta de huevos de gallina",
+        "amount": 540,
+        "ownerId": 1,
+        "type": "Ingreso",
+        "date": "2026-05-07",
+        "category": "Venta de huevos"
+      },
+      {
+        "id": 5,
+        "description": "Reparacion de bebederos",
+        "amount": 360,
+        "ownerId": 1,
+        "type": "Egreso",
+        "date": "2026-05-09",
+        "category": "Mantenimiento"
+      }
+    ]
+  },
+  "healthEvents": {
+    "health-events": [
+      {
+        "veterinarian": "Dra. Ana Lopez",
+        "id": 1,
+        "type": "Tratamiento",
+        "animalId": 1,
+        "treatment": "Aplicacion de vacuna triple bovina",
+        "description": "Vacuna triple bovina",
+        "date": "2026-05-02",
+        "prescription": "Observacion por 24 horas y mantener hidratacion",
+        "followUp": "Control rutinario en seis meses",
+        "diagnosis": "Animal sin signos de alarma durante revision preventiva",
+        "nextDueDate": "2026-11-02"
+      },
+      {
+        "veterinarian": "Dr. Pedro Ramirez",
+        "id": 2,
+        "type": "Tratamiento",
+        "animalId": 2,
+        "treatment": "Antibiotico y antiinflamatorio por tres dias",
+        "description": "Tratamiento por infeccion respiratoria leve",
+        "date": "2026-05-05",
+        "prescription": "Dosis segun peso, aplicar cada 24 horas",
+        "followUp": "Revisar temperatura y apetito",
+        "diagnosis": "Infeccion respiratoria leve",
+        "nextDueDate": "2026-05-12"
+      },
+      {
+        "veterinarian": "Dr. Pedro Ramirez",
+        "id": 3,
+        "type": "Diagnostico",
+        "animalId": 10,
+        "treatment": "Desparasitacion y control de peso",
+        "description": "Evaluacion por perdida de apetito",
+        "date": "2026-05-06",
+        "prescription": "Aplicar antiparasitario segun peso",
+        "followUp": "Revisar evolucion en siete dias",
+        "diagnosis": "Posible parasitosis gastrointestinal",
+        "nextDueDate": "2026-05-13"
+      },
+      {
+        "veterinarian": "Dr. Pedro Ramirez",
+        "id": 4,
+        "type": "Revision",
+        "animalId": 11,
+        "treatment": "Ajuste progresivo de dieta",
+        "description": "Revision de lote porcino en observacion",
+        "date": "2026-05-08",
+        "prescription": "Mantener hidratacion y racion dividida",
+        "followUp": "Control de consumo diario",
+        "diagnosis": "Estrés por cambio de alimento",
+        "nextDueDate": "2026-05-15"
+      },
+      {
+        "veterinarian": "Dra. Lucia Torres",
+        "id": 5,
+        "type": "Incidencia",
+        "animalId": 15,
+        "treatment": "Reposo y antiinflamatorio",
+        "description": "Cojera leve en ovino macho",
+        "date": "2026-05-04",
+        "prescription": "Separar del lote por tres dias",
+        "followUp": "Evaluar apoyo de extremidad",
+        "diagnosis": "Inflamacion por golpe en extremidad",
+        "nextDueDate": "2026-05-11"
+      }
+    ]
+  },
+  "users": {
+    "users": [
+      {
+        "id": 1,
+        "password": "anitec123",
+        "veterinarianId": 2,
+        "username": "ganadero",
+        "role": "rancher",
+        "fullName": "Carlos Mendoza"
+      },
+      {
+        "username": "veterinaria",
+        "role": "veterinarian",
+        "fullName": "Dra. Ana Lopez",
+        "id": 2,
+        "password": "anitec123"
+      },
+      {
+        "id": 3,
+        "password": "anitec123",
+        "veterinarianId": 2,
+        "username": "maria",
+        "role": "rancher",
+        "fullName": "Maria Gonzales"
+      },
+      {
+        "id": 4,
+        "password": "anitec123",
+        "veterinarianId": 5,
+        "username": "jose",
+        "role": "rancher",
+        "fullName": "Jose Quispe"
+      },
+      {
+        "username": "vetpedro",
+        "role": "veterinarian",
+        "fullName": "Dr. Pedro Ramirez",
+        "id": 5,
+        "password": "anitec123"
+      }
+    ]
+  },
+  "herds": {
+    "herds": [
+      {
+        "id": 1,
+        "name": "Hato Los Alamos",
+        "owner": "Carlos Mendoza",
+        "ownerId": 1,
+        "veterinarianId": 2,
+        "mainType": "Mixto",
+        "location": "Cajamarca"
+      },
+      {
+        "id": 2,
+        "name": "Granja El Molino",
+        "owner": "Carlos Mendoza",
+        "ownerId": 1,
+        "veterinarianId": 2,
+        "mainType": "Aves",
+        "location": "Cajamarca"
+      },
+      {
+        "id": 3,
+        "name": "Finca Santa Rosa",
+        "owner": "Maria Gonzales",
+        "ownerId": 3,
+        "veterinarianId": 2,
+        "mainType": "Ovino y caprino",
+        "location": "Junin"
+      },
+      {
+        "id": 4,
+        "name": "Establo La Esperanza",
+        "owner": "Maria Gonzales",
+        "ownerId": 3,
+        "veterinarianId": 2,
+        "mainType": "Bovino",
+        "location": "Junin"
+      },
+      {
+        "id": 5,
+        "name": "Fundo Alto Verde",
+        "owner": "Jose Quispe",
+        "ownerId": 4,
+        "veterinarianId": 5,
+        "mainType": "Mixto",
+        "location": "Cusco"
+      }
+    ]
+  },
+  "report-metrics": {
+    "report-metrics": [
+      {
+        "label": "Animales registrados",
+        "id": 1,
+        "value": "3",
+        "trend": "+12%"
+      },
+      {
+        "label": "Alertas sanitarias",
+        "id": 2,
+        "value": "2",
+        "trend": "Esta semana"
+      },
+      {
+        "label": "Balance mensual",
+        "id": 3,
+        "value": "S/ 950",
+        "trend": "+18%"
+      },
+      { "label": "Trazabilidad", "id": 4, "value": "100%", "trend": "Completa" }
+    ]
+  },
+  "farm-events": {
+    "farm-events": [
+      {
+        "id": 1,
+        "title": "Refuerzo de vacuna",
+        "type": "Sanitario",
+        "ownerId": 1,
+        "priority": "Alta",
+        "status": "Pendiente",
+        "date": "2026-05-12",
+        "veterinarianId": 2
+      },
+      {
+        "id": 2,
+        "title": "Control de peso mensual",
+        "type": "Productivo",
+        "ownerId": 1,
+        "priority": "Media",
+        "status": "Pendiente",
+        "date": "2026-05-15",
+        "veterinarianId": 2
+      },
+      {
+        "id": 3,
+        "title": "Revision de gastos",
+        "type": "Financiero",
+        "ownerId": 1,
+        "priority": "Baja",
+        "status": "Programado",
+        "date": "2026-05-20",
+        "veterinarianId": null
+      },
+      {
+        "id": 4,
+        "title": "Visita sanitaria ovina",
+        "type": "Visita veterinaria",
+        "ownerId": 3,
+        "priority": "Alta",
+        "status": "Pendiente",
+        "date": "2026-05-13",
+        "veterinarianId": 2
+      },
+      {
+        "id": 5,
+        "title": "Control reproductivo bovino",
+        "type": "Reproductivo",
+        "ownerId": 3,
+        "priority": "Media",
+        "status": "Programado",
+        "date": "2026-05-18",
+        "veterinarianId": 2
+      }
+    ]
+  },
+  "animals": {
+    "animals": [
+      {
+        "species": "Bovino",
+        "id": 1,
+        "weight": 430,
+        "herdId": 1,
+        "breed": "Holstein",
+        "name": "Luna",
+        "tag": "ANI-001",
+        "gender": "Hembra",
+        "status": "Saludable",
+        "birthDate": "2022-04-12"
+      },
+      {
+        "species": "Bovino",
+        "id": 2,
+        "weight": 520,
+        "herdId": 1,
+        "breed": "Brown Swiss",
+        "name": "Bruno",
+        "tag": "ANI-002",
+        "gender": "Macho",
+        "status": "En tratamiento",
+        "birthDate": "2021-08-20"
+      },
+      {
+        "species": "Ovino",
+        "id": 3,
+        "weight": 310,
+        "herdId": 3,
+        "breed": "Corriedale",
+        "name": "Nube",
+        "tag": "ANI-003",
+        "gender": "Hembra",
+        "status": "Observacion",
+        "birthDate": "2023-01-05"
+      },
+      {
+        "species": "Caprino",
+        "id": 4,
+        "weight": 58,
+        "herdId": 3,
+        "breed": "Saanen",
+        "name": "Pecas",
+        "tag": "ANI-004",
+        "gender": "Hembra",
+        "status": "Saludable",
+        "birthDate": "2023-09-14"
+      },
+      {
+        "species": "Pollo",
+        "id": 5,
+        "weight": 2,
+        "herdId": 2,
+        "breed": "Broiler",
+        "name": "Lote Pollos A",
+        "tag": "ANI-005",
+        "gender": "Mixto",
+        "status": "Saludable",
+        "birthDate": "2026-03-20"
+      }
+    ]
+  },
+  "authentication": {
+    "authentication": { "sign-up": [], "sign-in": [] }
+  }
+}
